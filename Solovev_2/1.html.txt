@@ -1,0 +1,30 @@
+	<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+var a=0;
+  p=prompt("Как называется красная планета");
+  if (p == "Марс")
+{
+alert("да");
+a = a+1;
+} else {
+  alert("нет");
+}
+
+var a=0;
+  p=prompt("Ты пойдешь по повествке");
+  if (p == "Да")
+{
+alert("Ну все габбела :( ");
+a = a+1;
+} else {
+  alert("А никуда не денешься :)");
+}
+</script>
+  </body>
+</html>

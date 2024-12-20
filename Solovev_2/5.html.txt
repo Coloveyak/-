@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+for (let i = 2; i <= 24; i++) {
+  let isPrime = true;
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(i);
+  }
+}
+</script>
+
+<!--Доп. задание-->
+<script> 
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+let guess;
+while (true) {
+  guess = parseInt(prompt("Угадайте число от 1 до 10:"));
+  if (guess === randomNumber) {
+    alert(`Поздравляем! Вы угадали число: ${randomNumber}`);
+    break;
+  } else if (guess < randomNumber) {
+    alert("Ваше число меньше загаданного.");
+  } else {
+    alert("Ваше число больше загаданного.");
+  }
+}
+</script>
+  </body>
+
+<!-- 1. Условия, которые могут проверяться оператором if:
+
+ Сравнения (равенство, неравенство, больше, меньше и т. д.)
+ Логические операции (AND, OR, NOT)
+ Проверки на истину и ложь (булевые значения)
+ Проверки на пустое значение (например, пустая строка или null)
+ Проверки типа объектов
+
+2. Отличия между циклами while, do и for:
+
+| while | Проверяется перед циклом    | Выполняется, если условие истинно |
+| do    | Проверяется после цикла     | Выполняется хотя бы один раз      |
+| for   | Проверяется в каждом цикле  | Выполняется, пока условие истинно | -->
+
+</html>
