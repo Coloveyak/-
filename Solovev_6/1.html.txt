@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script>
+const arr1 = [1, 2, 3];
+const arr2 = arr1.map(item => (item + 10) * 3); // Увеличиваем каждый элемент на 10 и в три раза
+alert(arr2);
+    </script>
+</body>
+</html>
