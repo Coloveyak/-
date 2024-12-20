@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        // Определение четверти часа по минутам
+        const min = parseInt(prompt("Введите количество минут (от 0 до 59):"));
+
+        switch (true) {
+            case (min >= 0 && min <= 14):
+                alert("Первая четверть");
+                break;
+            case (min >= 15 && min <= 29):
+                alert("Вторая четверть");
+                break;
+            case (min >= 30 && min <= 44):
+                alert("Третья четверть");
+                break;
+            case (min >= 45 && min <= 59):
+                alert("Четвертая четверть");
+                break;
+            default:
+                alert("Некорректное значение");
+        }
+    </script>
+</body>
+</html>
