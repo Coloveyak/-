@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+let guessedNumber = prompt("Загадайте число и умножьте его на 2, затем прибавьте к результату 7:");
+let guess = (Number(guessedNumber) - 7) / 2;
+alert("Вы загадали число: " + guess);
+</script>
+</body>
+</html>
