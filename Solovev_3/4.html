@@ -28,25 +28,25 @@ alert("Максимальное число раз выпадало значен�
 
 <!-- Доп.Задание -->
 <script>
-function simulate() {
-  const sequences = [];
-  for (let i = 0; i < 1000000; i++) {
-    let sequence = [];  // Массив для хранения последовательности
-    let value = Math.floor(Math.random()  3);  // 0 - красный, 1 - черный, 2 - белый
-    sequence.push(value);
-    while (sequence[sequence.length - 1] === value) {
-      value = Math.floor(Math.random()  3);
-      sequence.push(value);
-    }
-    sequences.push(sequence);
-  }
-  let longestSequence = 0;
-  for (const sequence of sequences) {
-    longestSequence = Math.max(longestSequence, sequence.length);
-  }
-  return longestSequence;
+let results = [];
+for (let i = 0; i < 1000000; i++) {
+  const randomNumber = Math.floor(Math.random()  3);
+  results.push(randomNumber);
 }
-console.log(`Самая длинная последовательность: ${simulate()}`);
+let currentSequence = [];
+let longestSequence = [];
+for (const result of results) {
+  if (currentSequence.length > 0 && currentSequence[currentSequence.length - 1] === result) {
+    currentSequence.push(result);
+  } else {
+    currentSequence = [result];
+  }
+  if (currentSequence.length > longestSequence.length) {
+    longestSequence = currentSequence;
+  }
+}
+const longestSequenceString = longestSequence.join('');
+alert('Самая длинная последовательность: ' + longestSequenceString);
 </script>
   </body>
 
