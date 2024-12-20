@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+const users = [
+  { name: "John", age: 16 },
+  { name: "Jane", age: 20 },
+  { name: "Peter", age: 18 }
+];
+const adults = users.filter(user => user.age >= 18);
+if (adults.length > 0) {
+  alert("Доступ к редактированию сайта имеет " + adults[0].name);
+} else {
+  alert("Ни у кого нет доступа к редактированию сайта");
+}
+</script>
+  </body>
+</html>
