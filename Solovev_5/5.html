@@ -7,10 +7,11 @@
   <body>
 <script>
 const daysToNewYear = () => {
-  const today = new Date();
-  const newYear = new Date(today.getFullYear() + 1, 0, 1);
-  return Math.ceil((newYear - today) / (1000 * 60 * 60 * 24));
-}
+  const now = new Date();
+  const newYear = new Date(now.getFullYear() + 1, 0, 1);
+  const diff = newYear - now;
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
+};
 
 alert(`До нового года осталось ${daysToNewYear()} дней`);
 </script>
