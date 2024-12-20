@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+const users = [
+  { id: 1, name: "John Doe", email: "johndoe@gmail.com" },
+  { id: 2, name: "Jane Smith", email: "janesmith@gmail.com" },
+];
+const orders = [
+  { id: 1, userId: 1, restaurantId: 1, date: new Date("2023-03-01") },
+  { id: 2, userId: 2, restaurantId: 2, date: new Date("2023-03-05") },
+];
+const restaurants = [
+  { id: 1, name: "Pizza Hut", address: "123 Main Street" },
+  { id: 2, name: "McDonald's", address: "456 Market Street" },
+];
+const userOrders = orders.filter((order) => order.userId === 1);
+alert(`Заказы пользователя John Doe:\n${userOrders.map((order) => order.id).join(", ")}`);
+const mcDonalds = restaurants.find((restaurant) => restaurant.name === "McDonald's");
+alert(`Информация о ресторане McDonald's:\nID: ${mcDonalds.id},\nНазвание: ${mcDonalds.name},\nАдрес: ${mcDonalds.address}`);
+</script>
+  </body>
+</html>
