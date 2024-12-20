@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+            showName(){
+                alert(this.name)
+            }
+            swapName(){
+                var name_swapped = "";
+                for (var i = this.name.length - 1; i >= 0; i--) {        
+                    name_swapped += this.name[i]; 
+                }     
+                alert(name_swapped);
+            }
+        }
+        let user = new User("Алексей");
+        user.showName();
+        user.swapName();
+    </script>
+
+<script>
+class Simulator {
+  constructor() {
+    this.colors = [0, 1, 2]; // Красный, Черный, Белый
+    this.longestSequence = 0;
+    this.currentSequence = 0;
+  }
+
+  generateRandomColor() {
+    return this.colors[Math.floor(Math.random()  this.colors.length)];
+  }
+
+  runSimulation() {
+    for (let i = 0; i < 1000000; i++) {
+      const color = this.generateRandomColor();
+
+      if (color === this.lastColor) {
+        this.currentSequence++;
+      } else {
+        this.lastColor = color;
+        this.currentSequence = 1;
+      }
+
+      if (this.currentSequence > this.longestSequence) {
+        this.longestSequence = this.currentSequence;
+      }
+    }
+
+    console.log(`Самая длинная последовательность: ${this.longestSequence}`);
+  }
+}
+
+const simulator = new Simulator();
+simulator.runSimulation();
+
+</script>
+</body>
+
+<!-- 1. Классы в JavaScript используются для создания объектов, которые объединяют данные (свойства) и методы (функции). 
+Они обеспечивают структурированный и переиспользуемый способ создания экземпляров объектов с общими характеристиками. Классы упрощают организацию кода и управление им, делая его более понятным и поддерживаемым.
+
+     2. В этом примере `MyConstructor` является функцией-конструктором, которая создает экземпляр класса `MyClass`. Это доказывает, что классы в JavaScript являются функциями-конструкторами под другим синтаксисом.
+class MyClass {
+  constructor() {}
+}
+
+// Получение функции-конструктора
+const MyConstructor = MyClass.constructor;
+
+// Создание экземпляра класса с помощью конструктора
+const instance = new MyConstructor();
+
+// Проверка типа экземпляра
+console.log(instance instanceof MyClass); // true -->
+
+</html>
