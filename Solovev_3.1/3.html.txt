@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+// Пользователи  
+const user1 = { name: "Alice", email: "alice@example.com" };  
+const user2 = { name: "Bob", email: "bob@example.com" };  
+  
+// Заказы  
+const order1 = { id: 1, user: user1, restaurant: "Pizza Hut", dish: "Pepperoni Pizza" };  
+const order2 = { id: 2, user: user2, restaurant: "McDonald's", dish: "Big Mac" };  
+  
+// Рестораны  
+const restaurant1 = { name: "Pizza Hut", address: "123 Main Street" };  
+const restaurant2 = { name: "McDonald's", address: "456 Elm Street" };  
+  
+// Найти все заказы, сделанные пользователем user1  
+const user1Orders = orders.filter((order) => order.user === user1);  
+  
+// Вывести информацию о заказах в диалоговом окне  
+user1Orders.forEach((order) => {  
+  alert(`Заказ №${order.id}: ${order.dish} из ${order.restaurant}`);  
+});
+
+// Вывести результат в диалоговое окно
+alert("Список заказов пользователя " + user1.name + ":");
+</script>
+  </body>
+</html>
