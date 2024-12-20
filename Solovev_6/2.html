@@ -6,14 +6,10 @@
   </head>
   <body>
 <script>
-   // Массив с годами рождения
 const birthYears = [1980, 1990, 2000, 2015, 2023];
 
 birthYears.forEach((year) => {
-  // Вычисляем возраст, вычитая год рождения из текущего года
   const age = new Date().getFullYear() - year;
-
-  // Выводим возраст с помощью alert
   alert(`Возраст: ${age}`);
 }); 
 </script>
