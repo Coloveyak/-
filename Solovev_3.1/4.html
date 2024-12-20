@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+function GroupMember(name) {
+  this.name = name;
+}
+
+const groupMembers = [
+  new GroupMember("Дима"),
+  new GroupMember("Алексей"),
+  new GroupMember("Александр"),
+  new GroupMember("Серго")
+];
+
+for (const member of groupMembers) {
+ alert(member.name);
+}
+</script>
+  </body>
+</html>
