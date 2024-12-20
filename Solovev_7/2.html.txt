@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+ const number = +prompt('Загадайте цифру до 9', '');
+switch (number) {
+  case 1:
+    alert('Вы ввели число 1');
+    break;
+  case 2:
+    alert('Вы ввели число 2');
+    break;
+  case 8:
+  case 9:
+    alert('Вы ввели число 8, а может и 9');
+    break;
+  default:
+    alert('Вы ввели неверную цифру');
+}
+</script>
+  </body>
+</html>
