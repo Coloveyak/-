@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-<script> 
-const фамилия = prompt("Введите вашу фамилию:");
-const isПалиндром = (фамилия === фамилия.split('').reverse().join(''));
-if (isПалиндром) {
-  alert("Ваша фамилия является палиндромом.");
-} else {
-  alert("Ваша фамилия не является палиндромом.");
-}
-  </script>
-  </body>
+</head>
+<body>
+<script>
+    const фамилия = prompt("Введите вашу фамилию:");
+    const isПалиндром = фамилия.toLowerCase() === фамилия.toLowerCase().split('').reverse().join('');
+    if (isПалиндром) {
+        alert("Ваша фамилия является палиндромом.");
+    } else {
+        alert("Ваша фамилия не является палиндромом.");
+    }
+</script>
+</body>
 </html>
