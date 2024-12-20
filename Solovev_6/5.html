@@ -21,5 +21,39 @@ const checkLength = (arr, len) => {
 const lenArray = checkLength(strArray, 3);
 alert(lenArray); 
 </script>
+
+<!-- Доп.Задание-->
+<script>
+const simulator = () => {
+  const values = [0, 1, 2];
+  let sequence = [];
+  while (sequence.length < 3) {
+    const index = Math.floor(Math.random() * values.length);
+    sequence.push(values[index]);
+  }
+
+  return sequence;
+};
+const sequences = [];
+for (let i = 0; i < 1000000; i++) {
+  sequences.push(simulator());
+}
+let shortestSequence = sequences[0];
+for (let i = 1; i < sequences.length; i++) {
+  const currentSequence = sequences[i];
+  if (currentSequence.length < shortestSequence.length) {
+    shortestSequence = currentSequence;
+  }
+}
+alert(`Самая короткая последовательность: ${shortestSequence}`);
+</script>
   </body>
+<!-- 1. Функция `Array.prototype.map` является функцией первого порядка, 
+ поскольку она принимает другой функцию (обратный вызов) в качестве аргумента, но не возвращает функцию.
+
+2. Анализ кода:
+Функция `mapForEach` является реализацией функции `Array.prototype.map` без использования синтаксиса стрелочных функций. 
+Она принимает массив и функцию обратного вызова и возвращает новый массив с результатами применения функции обратного вызова к каждому элементу массива.
+Функция `lenArray` является функцией высшего порядка, поскольку она принимает функцию обратного вызова в качестве аргумента и возвращает функцию.
+В данном случае функция обратного вызова для функции `lenArray` возвращает длину каждого элемента массива `strArray`. --> 
 </html>
