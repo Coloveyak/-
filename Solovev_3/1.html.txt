@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script>
+let numbers = [];
+for (let i = 0; i < 15; i++) {
+  numbers.push(Math.floor(Math.random() * 41) - 10);
+}
+alert("Исходный массив:\n" + numbers.join(", "));
+    </script>
+</body>
+</html>

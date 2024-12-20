@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+let sumPositive = 0;
+let countPositive = 0;
+let sumNegative = 0;
+let countNegative = 0;
+let countZeros = 0;
+
+for (let num of numbers) {
+  if (num > 0) {
+    sumPositive += num;
+    countPositive++;
+  } else if (num < 0) {
+    sumNegative += num;
+    countNegative++;
+  } else {
+    countZeros++;
+  }
+}
+
+if (countPositive === 0) {
+  alert("Среднее арифметическое положительных чисел: NaN");
+} else {
+  alert("Среднее арифметическое положительных чисел: " + (sumPositive / countPositive));
+}
+
+if (countNegative === 0) {
+  alert("Среднее арифметическое отрицательных чисел: NaN");
+} else {
+  alert("Среднее арифметическое отрицательных чисел: " + (sumNegative / countNegative));
+}
+
+alert("Число нулей: " + countZeros);
+</script>
+  </body>
+</html>

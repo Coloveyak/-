@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+let colors = ["Красный", "Черный", "Белый"];
+let colorsCount = [0, 0, 0];
+
+for (let i = 0; i < 1000000; i++) {
+  let colorIndex = Math.floor(Math.random() * 3);
+  colorsCount[colorIndex]++;
+}
+
+let maxCount = colorsCount[0];
+let maxColor = "Красный";
+
+for (let i = 0; i < colorsCount.length; i++) {
+  if (colorsCount[i] > maxCount) {
+    maxCount = colorsCount[i];
+    maxColor = colors[i];
+  }
+}
+alert("Максимальное число раз выпадало значение: " + maxColor + " (" + maxCount + " раз)");
+</script>
+
+<!-- Доп.Задание -->
+<script>
+function simulate() {
+  const sequences = [];
+  for (let i = 0; i < 1000000; i++) {
+    let sequence = [];  // Массив для хранения последовательности
+    let value = Math.floor(Math.random()  3);  // 0 - красный, 1 - черный, 2 - белый
+    sequence.push(value);
+    while (sequence[sequence.length - 1] === value) {
+      value = Math.floor(Math.random()  3);
+      sequence.push(value);
+    }
+    sequences.push(sequence);
+  }
+  let longestSequence = 0;
+  for (const sequence of sequences) {
+    longestSequence = Math.max(longestSequence, sequence.length);
+  }
+  return longestSequence;
+}
+console.log(`Самая длинная последовательность: ${simulate()}`);
+</script>
+  </body>
+
+<!-- 1. Элементы массива могут принимать любые значения допустимого типа данных для массива. 
+ Общие типы данных включают целые числа, вещественные числа, символы, строки и указатели. -->
+
+</html>

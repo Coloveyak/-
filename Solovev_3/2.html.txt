@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+<script>
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] < 0) {
+    numbers[i] = numbers[i] * numbers[i];
+  }
+}
+alert("Массив после замены отрицательных элементов их квадратами:\n" + numbers.join(", "));
+</script>
+  </body>
+</html>
