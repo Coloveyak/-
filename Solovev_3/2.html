@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
+</head>
+<body>
 <script>
+// Создадим массив numbers
+const numbers = [-2, -4, 5, 6, -8];
+
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] < 0) {
-    numbers[i] = numbers[i] * numbers[i];
-  }
+    if (numbers[i] < 0) {
+        numbers[i] = numbers[i] * numbers[i];
+    }
 }
+
 alert("Массив после замены отрицательных элементов их квадратами:\n" + numbers.join(", "));
 </script>
-  </body>
+</body>
 </html>
